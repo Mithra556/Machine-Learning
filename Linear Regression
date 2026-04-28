@@ -1,0 +1,79 @@
+Machine Learning: It means teaching a machine to learn patterns from data and make predictions or decisions.
+Input ->  model -> output
+ex: Netflix mivie recommendations
+
+Types of M.L:
+1. Supervised Learning  2. Unsupervised Learning   3. Reinforcement Learning
+
+1. Supervised Learning: It means the model learns from data where the correct answer is already known.
+It is used when we want to predict something.
+Types of supervised learning:
+1. Regression  2. Classification
+
+2. Unsupervised Learning: It means the data does not have correct answers. The model tries to find hidden patterns by itself.
+
+3. Reinforcement Learning: It means an agent learns by trying actions and recieving rewards or penalties.
+ex: self-driving cars
+
+Regression: It predicts a continuous number.
+
+Linear Regression: It uses one input feature to predict a number. It helps understand and predict simple relationships.
+y = mx + c
+
+Multiple Linear Regression: uses more than one input feature.
+
+Ordinary Least Squares: It finds the best line by minimizing squared errors.
+For each data point, 
+residual = Actual value - Predicted value
+then square each residual and then add them.
+OLS chooses the line where this total is smallest.
+
+Loss Function: Loss Function is the error for one single data point
+Cost Function: avg or total error for the entire dataset.
+Gradient Descent: It finds the best parameter values by slowly reducing the error.
+x-axis: slope, weights  y-axis: error, intercept
+visually it becomes a 3D bowl, the bowl represents cost function.
+
+Global minimum: It is the absolute lowest point of the entire cost function.
+Local minimum: It is a point that is lower than nearby points but not necessarily the lowest overall.
+For linear regression with mean squared error the cost function is usually convex, it means Gradient descent can reach the global minimum, if learning rate is chosen properly.
+For non-convex models like neural networks, gradient descent may reach alocal minimum or flat region.
+
+Learning rate: It controls step size.
+
+After the model is trained We use Evaluation metrics to check how good the model is
+Evaluation Metrics:
+
+1. R^2: It tells how much variation in the target is explained by the model.
+ex: R^2 = 0.80
+It means model explains 80% of the variation in the output
+R^2 = 1 - unexplaines variation/ total variation
+
+2. Adjusted R^2: It is a better version of R^2 for multiple regression. It penalizes unnecessary features.
+It almost always increases when you add more features, even useless ones.
+It increases only if new feature actually helps.
+
+Multicollinearity: It means two or more input features are highly related to each other.
+ex: height in inches, height in centimeters
+
+It becomes hard for the model to decide which feature is responsible
+
+Multicollinearity can be fixed by removing one correlated feature, combine features, use PCA, use Ridge regression, collect more data
+
+Principal component Analysis: It reduces many features into fewer new features while keeping most important information. 
+It is used for dimensionality reduction, removing redundant information, visualization, speeding up models, handling multicollinearity.
+
+Base-variance Tradeoff: 
+Bias means the model is too simple and cannot learn the real pattern properly.
+when the real pattern is curved relationship but the model used is straight line it misses the real pattern. 
+High Bias causes Underfitting, where model performs poorly on training data and test data.
+
+Variance: It means the model is too sensitive to training data i.e, how much the model changes when training data changes.
+High Variance causes Overfitting, where model performs well on training data but badly on test data.
+
+Regularization: It prevents the model from becoming too complex. It adds a penalty for large coefficients.
+without Regularization the model may overfit.
+
+1. Lasso Regression/ L1 Regularization: It adds a penalty based on the absolute value of coefficients.
+It can shrink some coefficients exactly to zero i.e, it can perform feature selection.
+
