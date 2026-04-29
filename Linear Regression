@@ -30,6 +30,7 @@ OLS chooses the line where this total is smallest.
 
 Loss Function: Loss Function is the error for one single data point
 Cost Function: avg or total error for the entire dataset.
+
 Gradient Descent: It finds the best parameter values by slowly reducing the error.
 x-axis: slope, weights  y-axis: error, intercept
 visually it becomes a 3D bowl, the bowl represents cost function.
